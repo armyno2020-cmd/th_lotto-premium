@@ -93,15 +93,6 @@ export default function Home() {
 
   const popularLotteries = lotteryTypes.filter(l => l.is_popular)
 
-  const getCategory = (type: string): string => {
-    if (type.includes('TH_') || type === 'GOV') return 'GOV'
-    if (type.includes('LAO')) return 'LAO'
-    if (type.includes('HANOI')) return 'HANOI'
-    if (type.includes('MALAY')) return 'MALAY'
-    if (type.includes('STOCK') || type.includes('NIKKEI') || type.includes('CHINA') || type.includes('HANGSENG')) return 'STOCK'
-    return 'GOV'
-  }
-
   const getLotteryName = (type: string): string => {
     const lottery = lotteryTypes.find(l => l.id === type)
     return lottery?.full_name || type

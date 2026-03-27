@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { supabase } from '../lib/supabase'
 import { useState, useEffect } from 'react'
@@ -16,7 +16,6 @@ interface Transaction {
 
 export default function Wallet() {
   const { user } = useAuth()
-  const navigate = useNavigate()
   const [transactions, setTransactions] = useState<Transaction[]>([])
   const [loading, setLoading] = useState(true)
 

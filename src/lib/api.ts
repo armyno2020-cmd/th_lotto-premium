@@ -1,6 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
-
-const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || 'YOUR_GOOGLE_APPS_SCRIPT_URL'
+const GOOGLE_SCRIPT_URL = (import.meta as any).env?.VITE_GOOGLE_SCRIPT_URL || 'YOUR_GOOGLE_APPS_SCRIPT_URL'
 
 export interface ApiResponse<T = any> {
   success: boolean

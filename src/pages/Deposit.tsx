@@ -29,7 +29,7 @@ export default function Deposit() {
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [amount, setAmount] = useState(500)
-  const [selectedPromo, setSelectedPromo] = useState<Promotion | null>(location.state?.promo || null)
+  const [selectedPromo] = useState<Promotion | null>(location.state?.promo || null)
   const [selectedBank, setSelectedBank] = useState<Bank | null>(null)
   const [banks, setBanks] = useState<Bank[]>([])
   const [slipFile, setSlipFile] = useState<File | null>(null)

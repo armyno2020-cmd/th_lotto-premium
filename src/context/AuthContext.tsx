@@ -6,9 +6,15 @@ interface User {
   phone: string
   pin: string
   name: string
+  full_name?: string
   role: string
   status: string
   balance: number
+  vip_level?: number
+  bank_name?: string
+  account_number?: string
+  turnover?: number
+  affiliate_balance?: number
   referrer_id: string | null
   referral_code: string | null
   created_at: string

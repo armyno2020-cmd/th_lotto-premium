@@ -478,7 +478,7 @@ export default function Betting() {
                 )}
                 <button
                   onClick={handlePlaceBet}
-                  disabled={loading || (user && user.balance < getTotalAmount())}
+                  disabled={loading || !!(user && user.balance < getTotalAmount())}
                   className="w-full py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-xl shadow-lg disabled:opacity-50"
                 >
                   {loading ? 'กำลังส่งโพย...' : 'ยืนยันส่งโพย'}

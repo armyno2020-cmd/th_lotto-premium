@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 
 interface YouTubeEmbedProps {
   url: string
@@ -30,8 +30,6 @@ export default function YouTubeEmbed({ url }: YouTubeEmbedProps) {
       </div>
     )
   }
-
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
 
   return (
     <div className="relative aspect-video bg-black" ref={containerRef}>

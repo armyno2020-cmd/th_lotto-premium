@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../context/AuthContext'
-import type { Bet, LotteryConfig } from '../types'
+import type { Bet } from '../types'
 import toast from 'react-hot-toast'
 
 const BET_TYPE_LABELS: Record<string, string> = {

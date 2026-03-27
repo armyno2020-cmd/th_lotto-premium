@@ -123,13 +123,16 @@ export default function Profile() {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className={`material-symbols-outlined ${getVipColor(user.vip_level || 'Bronze')}`}>
-              {user.vip_level === 'Diamond' ? 'diamond' :
-               user.vip_level === 'Platinum' ? 'workspace_premium' :
-               user.vip_level === 'Gold' ? 'emoji_events' :
-               user.vip_level === 'Silver' ? 'stars' : 'military_tech'}
+            <span className={`material-symbols-outlined ${getVipColor(String(user.vip_level || 0))}`}>
+              {user.vip_level === 4 ? 'diamond' :
+               user.vip_level === 3 ? 'workspace_premium' :
+               user.vip_level === 2 ? 'emoji_events' :
+               user.vip_level === 1 ? 'stars' : 'military_tech'}
             </span>
-            <span className="font-bold">{user.vip_level || 'Bronze'}</span>
+            <span className="font-bold">{user.vip_level === 4 ? 'Diamond' :
+               user.vip_level === 3 ? 'Platinum' :
+               user.vip_level === 2 ? 'Gold' :
+               user.vip_level === 1 ? 'Silver' : 'Bronze'}</span>
           </div>
           <div className="text-right">
             <p className="text-white/70 text-xs">ยอดเงิน</p>
